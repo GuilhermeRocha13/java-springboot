@@ -1,4 +1,4 @@
-package com.example.springwatch.model;
+package com.springwatch.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

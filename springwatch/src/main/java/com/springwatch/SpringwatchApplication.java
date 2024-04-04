@@ -1,12 +1,14 @@
-package com.example.springwatch;
+package com.springwatch;
 
+import com.springwatch.model.showData;
+import com.springwatch.services.dataConvert;
 import io.github.cdimascio.dotenv.Dotenv;
-import com.example.springwatch.services.ApiConsum;
+import com.springwatch.services.ApiConsum;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.example.springwatch.model.*;
-import com.example.springwatch.services.*;
+import com.springwatch.model.*;
+import com.springwatch.services.*;
 
 @SpringBootApplication
 public class SpringwatchApplication implements CommandLineRunner {
@@ -30,5 +32,7 @@ public class SpringwatchApplication implements CommandLineRunner {
 		showData data = converter.dataGet(json, showData.class);
 
 		System.out.println(data);
+
+		epData episodesData = new converter.dataGet(json, epData.class);
 	}
 }

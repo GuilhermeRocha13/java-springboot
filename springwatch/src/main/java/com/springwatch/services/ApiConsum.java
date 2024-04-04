@@ -1,4 +1,4 @@
-package com.example.springwatch.services;
+package com.springwatch.services;
 
 import java.io.IOException;
 import java.net.URI;

@@ -1,4 +1,4 @@
-package com.example.springwatch;
+package com.springwatch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

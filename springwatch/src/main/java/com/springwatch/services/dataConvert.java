@@ -1,6 +1,6 @@
-package com.example.springwatch.services;
+package com.springwatch.services;
 
-import com.example.springwatch.model.*;
+import com.springwatch.model.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 public class dataConvert implements idataConvert {
