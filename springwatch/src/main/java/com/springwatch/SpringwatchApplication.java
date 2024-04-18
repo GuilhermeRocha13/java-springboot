@@ -34,5 +34,6 @@ public class SpringwatchApplication implements CommandLineRunner {
 		System.out.println(data);
 
 		epData episodesData = new converter.dataGet(json, epData.class);
+		System.out.println(${{ secrets.host }})
 	}
 }
