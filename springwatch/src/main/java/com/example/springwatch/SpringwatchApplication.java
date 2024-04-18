@@ -14,5 +14,7 @@ public class SpringwatchApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+			Systen.out.println("teste workflow")
+
 	}
 }
