@@ -1,1 +1,10 @@
-name: deployment.
+name: deployment.spring
+
+on: 
+    push
+        brances: [main]
+    
+    workflow_dispatch:
+
+  jobs:
+      build
