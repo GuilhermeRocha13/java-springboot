@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - main
+      - spring-no-web
 
 jobs:
   deploy:
@@ -20,3 +20,4 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         source: "."
+
