@@ -8,11 +8,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
+      uses: GuilhermeRocha13/java-springboot@workflow
       with:
-        host: ${{secrets.SSH_HOSTNAME}}
+        host: ${{secrets.SSH_HOSTname}}
         username: ${{secrets.SSH_USERNAME}}
         password: ${{secrets.SSH_PASSWORD}}
         port: 22
         source: .
         target: /home/testegit
+        
