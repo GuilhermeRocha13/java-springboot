@@ -16,7 +16,7 @@ jobs:
             - name: Deploy
               uses: trendyminds/github-actions-rsync@master
               with:
-               # RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
+                RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
                 RSYNC_TARGET: /home/testegit
                 RSYNC_SOURCE: .
               env:
