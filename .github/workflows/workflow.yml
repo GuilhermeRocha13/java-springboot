@@ -15,7 +15,7 @@ jobs:
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
-        host: ec2-3-83-202-88.compute-1.amazonaws.com
+        host: 3.83.202.88
         username: Administrator
         password: K8L6zInS62FgB1.F@RKx&Lj)dPc3b2Kf
         port: 22
