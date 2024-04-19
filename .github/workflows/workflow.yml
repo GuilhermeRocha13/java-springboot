@@ -16,8 +16,8 @@ jobs:
               uses: trendyminds/github-actions-rsync@master
               with:
                 RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
-                RSYNC_TARGET: /path/to/target/folder/on/server
-                RSYNC_SOURCE: /src/public/
+                RSYNC_TARGET: C:\
+                RSYNC_SOURCE: /
               env:
                 SSH_PRIVATE_KEY: ${{secrets.SSH}}
                 SSH_USERNAME: ${{secrets.USERNAME}}
