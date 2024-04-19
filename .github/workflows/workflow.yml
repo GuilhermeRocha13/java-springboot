@@ -12,7 +12,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v1
       
-            - name: Deploy to sandbox via rsync
+            - name: Deploy
               uses: trendyminds/github-actions-rsync@master
               with:
                 RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
