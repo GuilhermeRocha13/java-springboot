@@ -5,8 +5,13 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    steps:
+    steps:      
     - uses: actions/checkout@v4
+    - name: Run a multi-line script
+      run: |
+        mkdir ../build
+        cp -TR . ../build
+        tar -cvf deploy.tar ../build/
     - name: copy file via ssh password
       uses: GuilhermeRocha13/java-springboot@workflow
       with:
@@ -14,6 +19,6 @@ jobs:
         username: ${{secrets.SSH_USERNAME}}
         password: ${{secrets.SSH_PASSWORD}}
         port: 22
-        source: .
+        source: deploy.tar
         target: /home/testegit
         
