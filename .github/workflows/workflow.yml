@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
+      uses: GuilhermeRocha13/java-springboot@workflow
       with:
         host: ${{secrets.SSH_HOSTNAME}}
         username: ${{secrets.SSH_USERNAME}}
