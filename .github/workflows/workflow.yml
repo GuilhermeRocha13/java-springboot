@@ -15,7 +15,7 @@ jobs:
             - name: Deploy
               uses: GuilhermeRocha13/java-springboot@spring-no-web
               with:
-                RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
+               # RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
                 RSYNC_TARGET: C:\
                 RSYNC_SOURCE: /
               env:
