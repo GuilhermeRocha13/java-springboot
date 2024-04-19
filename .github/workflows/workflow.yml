@@ -13,7 +13,7 @@ jobs:
         cp -TR . ../build
         tar -cvf deploy.tar ../build/
     - name: copy file via ssh password
-      uses: GuilhermeRocha13/java-springboot@workflow
+      uses: appleboy/scp-action@master
       with:
         host: ${{secrets.SSH_HOSTNAME}}
         username: ${{secrets.SSH_USERNAME}}
