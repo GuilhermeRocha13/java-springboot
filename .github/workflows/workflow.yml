@@ -1,10 +1,6 @@
-name: CI
-
-on:
-    push:
-        branches: spring-no-web
-
-jobs:  
+name: scp files
+on: [push]
+jobs:
 
     continuos-integration:
         runs-on: ubuntu-latest
@@ -17,7 +13,7 @@ jobs:
               uses: trendyminds/github-actions-rsync@master
               with:
                 RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
-                RSYNC_TARGET: /home/ubuntu/teste
+                RSYNC_TARGET: /home/testegit
                 RSYNC_SOURCE: .
               env:
                 SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}

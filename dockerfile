@@ -1,11 +1,5 @@
-FROM alpine:latest
+FROM ghcr.io/appleboy/drone-scp:1.6.14
 
-# Update
-RUN apk update
+COPY entrypoint.sh /bin/entrypoint.sh
 
-# Install packages
-RUN apk add rsync openssh-client
-
-# Copy entrypoint
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/entrypoint.sh"]
