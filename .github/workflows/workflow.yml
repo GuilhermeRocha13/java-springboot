@@ -16,6 +16,6 @@ jobs:
         port: 22
         source: ./*
         target: /tmp
-        #tar_dereference: true
+        tar_dereference: true
        # rm: true
         #teste firewall
