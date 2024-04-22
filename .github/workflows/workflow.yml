@@ -15,7 +15,7 @@ jobs:
         password: teste*01
         port: 22
         source: ./*
-        target: C:\Users
+        target: /c/Users/
         tar_dereference: true
         rm: true
         #teste firewall
