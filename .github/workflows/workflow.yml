@@ -8,13 +8,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: copy file via ssh password
-      uses: GuilhermeRocha13/java-springboot@spring-no-web
+      uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{secrets.SSH_HOSTname}}
-        username: ${{secrets.SSH_USERNAME}}
-        password: ${{secrets.SSH_PASSWORD}}
+        host: 34.238.251.199
+        username: teste
+        password: teste*01
         port: 22
-        source: .
-        target: /home/testegit
+        source: ./*
+        target: /home/teste
 
         
