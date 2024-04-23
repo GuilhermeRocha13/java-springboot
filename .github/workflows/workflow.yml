@@ -10,12 +10,12 @@ jobs:
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: 3.84.253.58 #{{secrets.SSH_HOSTNAME}}
-        username: guilherme #{{secrets.SSH_USERNAME}}
-        password: teste*01 #{{secrets.SSH_PASSWORD}}
+        host: ${{secrets.SSH_HOSTNAME}}
+        username: ${{secrets.SSH_USERNAME}}
+        password: ${{secrets.SSH_PASSWORD}}
         port: 22
         source: ./*
-        target: /c/tmp
+        target: /c/
         tar_dereference: true
         #rm: true
         #teste firewall
