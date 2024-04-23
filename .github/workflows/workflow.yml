@@ -17,5 +17,5 @@ jobs:
         source: ./*
         target: /c/
         tar_dereference: true
-        rm: true
+        #rm: true
         #teste firewall
