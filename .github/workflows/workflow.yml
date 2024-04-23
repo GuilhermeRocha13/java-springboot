@@ -15,7 +15,7 @@ jobs:
         password: ${{secrets.SSH_PASSWORD}}
         port: 22
         source: ./*
-        target: /
+        target: /tmp/
         tar_dereference: true
         #rm: true
         #
