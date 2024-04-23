@@ -18,5 +18,4 @@ jobs:
         target: /tmp
         tar_dereference: true
         #rm: true
-        
         #teste firewall
