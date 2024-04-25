@@ -1,6 +1,6 @@
 name: other
 on: 
-  pull_request:
+  push:
     branches: deploy-windows
 jobs:
   build:
