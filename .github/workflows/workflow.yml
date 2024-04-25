@@ -1,7 +1,6 @@
 name: SCP Transfer
 on: 
-    pull_request:
-      branches: workflow
+    push
 jobs:
 
   build:
