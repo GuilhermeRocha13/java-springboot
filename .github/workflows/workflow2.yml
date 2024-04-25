@@ -1,0 +1,19 @@
+name: other
+on: 
+    push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:      
+    - uses: actions/checkout@v4
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{secrets.SSH_HOSTNAME}}
+        username: ${{secrets.SSH_USERNAME}}
+        password: ${{secrets.SSH_PASSWORD}}
+        port: 22
+        source: ./*
+        target: /c/
+        tar_dereference: true
