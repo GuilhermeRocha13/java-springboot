@@ -16,6 +16,6 @@ jobs:
         password: teste*01
         port: 22
         source: ./*
-        target: /c/Users/guilherme/Desktop/repo
+        target: /c/Users/guilherme/Desktop/repo/
         tar_dereference: true
         #rm: true
