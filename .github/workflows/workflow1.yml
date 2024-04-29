@@ -1,7 +1,7 @@
 name: SCP Transfer
 on: 
-    pull_request:
-      branches: push
+    push:
+      branches: deploy-windows
 jobs:
   build:
     name: Build
@@ -11,12 +11,12 @@ jobs:
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{secrets.SSH_HOSTNAME}}
+        host: 52.23.236.101
         username: ${{secrets.SSH_USERNAME}}
-        password: ${{secrets.SSH_PASSWORD}}
+        password: teste*01
         port: 22
         source: ./*
-        target: /
+        target: /c/Users/guilherme
         tar_dereference: true
         #rm: true
         #teste firewall
