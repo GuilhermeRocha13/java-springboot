@@ -1,7 +1,7 @@
-name: SCP Transfer
+name: deploy
 on: 
-    push:
-      branches: deploy-windows
+  push:
+    branches: pipeline-teste
 jobs:
   build:
     name: Build
@@ -12,11 +12,10 @@ jobs:
       uses: appleboy/scp-action@v0.1.7
       with:
         host: 52.23.236.101
-        username: ${{secrets.SSH_USERNAME}}
+        username: guilherme
         password: teste*01
         port: 22
         source: ./*
         target: /c/Users/guilherme/Desktop/repo
         tar_dereference: true
         #rm: true
-        #teste rm
