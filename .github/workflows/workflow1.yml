@@ -1,7 +1,7 @@
 name: SCP Transfer
 on: 
     pull_request:
-      branches: deploy-windows
+      branches: push
 jobs:
   build:
     name: Build
