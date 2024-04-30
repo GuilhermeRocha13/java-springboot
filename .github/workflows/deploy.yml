@@ -10,7 +10,7 @@ jobs:
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
-        host: 52.23.236.101
+        host: 3.85.128.169
         username: guilherme
         password: teste*01
         port: 22
