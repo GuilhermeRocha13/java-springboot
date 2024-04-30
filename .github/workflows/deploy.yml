@@ -18,3 +18,5 @@ jobs:
         target: /c/Users/guilherme/Desktop/repo/
         tar_dereference: true 
         rm: true
+
+        
