@@ -15,7 +15,7 @@ jobs:
             pwd
             echo "install sshpass"
             echo "ssh connection"
-            sshpass -p teste*01 scp -o StrictHostKeyChecking=no /home/runner/* teste@18.233.162.151:/home/teste
+            sshpass -p teste*01 scp -o StrictHostKeyChecking=no /home/runner/work/* teste@18.233.162.151:/home/teste
 
 
             
