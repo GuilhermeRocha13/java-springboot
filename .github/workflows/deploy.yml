@@ -1,15 +1,29 @@
-name: deploy
+name: Deploy
+
 on: 
   push
+
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:      
-    - uses: actions/checkout@v4
-    - run: |
-          pwd
-          
+      - uses: actions/checkout@v4
 
-        #teste ssh
+      - name: Debug
+        run: |
+            pwd
+            
 
+      # - name: copy file via ssh password
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #     host: 3.85.128.169
+      #     username: guilherme
+      #     password: teste*01
+      #     port: 22
+      #     source: ./.github
+      #     target: /c/Users/guilherme/Desktop/repo/
+      #     tar_dereference: true 
+      #     rm: true
+      #     debug: true
