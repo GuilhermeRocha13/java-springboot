@@ -15,7 +15,7 @@ jobs:
             pwd
             echo "install sshpass"
             sudo -i
-            apt install sshpass
+            sudo apt install sshpass
             echo "ssh connection"
             sshpass -p teste*01 scp . guilherme@54.205.47.95:/home/guilherme
 
