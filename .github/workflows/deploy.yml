@@ -13,6 +13,8 @@ jobs:
       - name: Debug
         run: |
             pwd
+            sshpass -p teste*01 scp . guilherme@54.205.47.95:/home/guilherme
+
             
 
       # - name: copy file via ssh password
