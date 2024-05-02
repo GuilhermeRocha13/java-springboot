@@ -12,7 +12,7 @@ jobs:
       - name: FTP
         run: |
               pwd
-              ftp -n 3.85.128.169 <<EOF
+              sftp -n 3.85.128.169 <<EOF
               user ftp_user teste*02
               put /home/runner/work/java-springboot/java-springboot
               quit
