@@ -13,7 +13,6 @@ jobs:
         run: |
               pwd
               sftp ftp_user@3.85.128.169 
-            # teste*02
               put /home/runner/work/java-springboot/java-springboot
 
             #       echo "ssh connection"
