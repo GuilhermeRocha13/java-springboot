@@ -9,9 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - uses: actions/checkout@v4
-      - name: Debug
-         run: |
-             pwd
+      #- name: Debug
+      #   run: pwd
       #       echo "ssh connection"
       #       sshpass -p teste*01 scp -r -o StrictHostKeyChecking=no /home/runner/work/java-springboot/java-springboot guilherme@3.85.128.169:C:\Users\guilherme\Desktop\repo
       - name: copy file via ssh password
