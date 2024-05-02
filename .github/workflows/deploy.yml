@@ -12,8 +12,8 @@ jobs:
       - name: FTP
         run: |
               pwd
-              sftp -o StrictHostKeyChecking=no 3.85.128.169 <<EOF
-              user ftp_user teste*02
+              sftp -o StrictHostKeyChecking=no ftp_user@3.85.128.169 <<EOF
+              teste*02
               put /home/runner/work/java-springboot/java-springboot
               quit
               EOF
