@@ -21,14 +21,14 @@ jobs:
             #       echo "ssh connection"
             #       sshpass -p teste*01 scp -r -o StrictHostKeyChecking=no /home/runner/work/java-springboot/java-springboot guilherme@3.85.128.169:C:\Users\guilherme\Desktop\repo
         
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@v0.1.7
-        with:
-           host: 3.85.128.169
-           username: guilherme
-           password: teste*01
-           port: 22
-           source: ./*
-           target: /c/Users/guilherme/Desktop/repo/
-           tar_dereference: true 
-           rm: true
+      # - name: copy file via ssh password
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #      host: 3.85.128.169
+      #      username: guilherme
+      #      password: teste*01
+      #      port: 22
+      #      source: ./*
+      #      target: /c/Users/guilherme/Desktop/repo/
+      #      tar_dereference: true 
+      #      rm: true
