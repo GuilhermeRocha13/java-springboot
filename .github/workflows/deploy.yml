@@ -13,7 +13,8 @@ jobs:
         run: |
               pwd
               sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@3.85.128.169 << !
-              put /caminho/do/seu/arquivo/arquivo.txt
+              cd Share/
+              put /home/runner/work/java-springboot/java-springboot
               bye
               !
 
