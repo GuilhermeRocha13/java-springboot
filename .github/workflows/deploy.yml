@@ -20,7 +20,7 @@ jobs:
            username: guilherme
            password: teste*01
            port: 22
-           source: ./.github
+           source: ./
            target: /c/Users/guilherme/Desktop/repo/
            tar_dereference: true 
            rm: true
