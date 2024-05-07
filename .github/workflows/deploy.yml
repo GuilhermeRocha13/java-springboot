@@ -1,35 +1,21 @@
 name: Deploy
-
 on: 
-  push
-
+  push:
+   branches:
+    - deploy-windows
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:      
       - uses: actions/checkout@v4
-      - name: FTP
+      - name: SFTP Transfer
         run: |
-              pwd
-              sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@3.85.128.169 << !
-              cd Share/
-              put -r /home/runner/work/java-springboot/java-springboot
-              bye
-              !
-
-
-            #       echo "ssh connection"
-            #       sshpass -p teste*01 scp -r -o StrictHostKeyChecking=no /home/runner/work/java-springboot/java-springboot guilherme@3.85.128.169:C:\Users\guilherme\Desktop\repo
-        
-      # - name: copy file via ssh password
-      #   uses: appleboy/scp-action@v0.1.7
-      #   with:
-      #      host: 3.85.128.169
-      #      username: guilherme
-      #      password: teste*01
-      #      port: 22
-      #      source: ./*
-      #      target: /c/Users/guilherme/Desktop/repo/
-      #      tar_dereference: true 
-      #      rm: true
+             sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@44.203.253.118 << !
+             cd Share/
+             put -r /home/runner/work/gofree-ingressos-site-apis/gofree-ingressos-site-apis
+             bye
+             !
+      - name: IIS Deploy
+        run: 
+            sshpass -p teste*01 ssh -o StrictHostKeyChecking=no guilherme@44.203.253.118 'sh /c/Users/ftp_user/Share/teste.bat'
