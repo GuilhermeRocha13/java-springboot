@@ -13,7 +13,7 @@ jobs:
         run: |
              sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@44.203.253.118 << !
              cd Share/
-             put -r /home/runner/work/gofree-ingressos-site-apis/gofree-ingressos-site-apis
+             put -r /home/runner/work/java-springboot/java-springboot
              bye
              !
       - name: IIS Deploy
