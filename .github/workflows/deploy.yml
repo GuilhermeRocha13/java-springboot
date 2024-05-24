@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: SFTP Transfer
         run: |
-             sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@44.203.253.118 << !
+             sshpass -p teste*02 sftp -o StrictHostKeyChecking=no -oBatchMode=no -b - ftp_user@18.208.168.230 << !
              cd Share/
              put -r /home/runner/work/java-springboot/java-springboot
              bye
              !
       - name: IIS Deploy
         run: 
-            sshpass -p teste*01 ssh -o StrictHostKeyChecking=no guilherme@44.203.253.118 'sh /c/Users/ftp_user/Share/teste.bat'
+            sshpass -p teste*01 ssh -o StrictHostKeyChecking=no guilherme@18.208.168.230 'sh /c/Users/ftp_user/Share/teste.bat'
